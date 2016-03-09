@@ -210,8 +210,11 @@ function resizeText() {
 <section  id="service">
   <div class="container">
     <h2>Aluminio</h2>
+    
     <div class="service_area">
+        
       <div class="row">
+          
         <div class="col-lg-4 col-sm-4">
           <div class="service_block">
             <div class="delay-03s animated wow  zoomIn">
@@ -225,6 +228,7 @@ function resizeText() {
             <a href="" class="contact_btn">Catálogo</a>
           </div>
         </div>
+          
         <div class="col-lg-4 col-sm-4">
           <div class="service_block">
             <div class="delay-03s animated wow zoomIn">
@@ -241,6 +245,7 @@ Juntas de estanqueidad en EPDM..</p>
             <a href="" class="contact_btn">Catálogo</a>
           </div>
         </div>
+          
         <div class="col-lg-4 col-sm-4">
           <div class="service_block">
             <div class="delay-03s animated wow zoomIn">
@@ -258,7 +263,9 @@ Esta ventana esta orientada a los profesionales que buscan la calidad sin descui
             <a href="" class="contact_btn">Catálogo</a>
           </div>
         </div>
+          
       </div>
+        
     </div>
   </div>
 </section>
@@ -415,186 +422,143 @@ Esta ventana esta orientada a los profesionales que buscan la calidad sin descui
 </section>
 <!--main-section client-part-end-->
 
-<!--new_portfolio--> 
 
-<!-- Portfolio -->
 <section id="frente_armario" class="content"> 
-  
-  <!-- Container -->
-  <div class="container portfolio-title"> 
+  <div class="container">
+    <h2>Frente Armario</h2>
     
-    <!-- Section Title -->
-    <div class="section-title">
-      <h2>Portfolio</h2>
-    </div>
-    <!--/Section Title --> 
+    <div class="service_area">
     
-  </div>
-  <!-- Container -->
-  
-  <div class="portfolio-top"></div>
-  
-  <!-- Portfolio Plus Filters -->
-  <div class="portfolio"> 
-    
-    <!-- Portfolio Filters -->
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active"><h5>All</h5></a></li>
-        <li><a class="" href="#" data-filter=".branding"><h5>Branding</h5></a></li>
-        <li><a class="" href="#" data-filter=".design"><h5>Design</h5></a></li>
-        <li><a class="" href="#" data-filter=".photography"><h5>Photography</h5></a></li>
-        <li><a class="" href="#" data-filter=".videography"><h5>Videography</h5></a></li>
-        <li><a class="" href="#" data-filter=".web"><h5>Web</h5></a></li>
-      </ul>
-    </div>
-    <!--/Portfolio Filters --> 
-    
-    <!-- Portfolio Wrap -->
-    <div class="isotope" style="position: relative; overflow: hidden; height: 480px;" id="portfolio-wrap"> 
-      
-    <?php
-    //leo las fotos de la carpeta "images/Frente"
-    $directorio = opendir("./images/Frentes/Interiores"); //ruta actual
-    while ($archivo = readdir($directorio)) //obtenemos un archivo y luego otro sucesivamente
-    {
-        if (!is_dir($archivo))//verificamos si es o no un directorio
-        {
-            $descripcion = explode('.',$archivo);
-            $descripcion = $descripcion[0];
-        ?>
-        
-      <!-- Portfolio Item With PrettyPhoto  -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   web isotope-item">
-        <div class="portfolio-image"> <img src="images/Frentes/Interiores/<?php echo $archivo;?>"  alt="<?php echo $descripcion;?>"> </div>
-        <!--<a title="2 Hojas crema butilar" rel="prettyPhoto[galname]" href="">-->
-        <div class="project-overlay">
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">Interiores Armarios</h4>
-            <p class="project-categories"><?php echo $descripcion;?></p>
-          </div>
-        </div>
-<!--        </a> -->
-      </div>
-      <!--/Portfolio Item With PrettyPhoto  --> 
-      
-        <?php
-        }
-    }
+<?php
+//leo las fotos de la carpeta "images/Frente"
 
+$listado = scandir("./images/Frentes/Interiores");
+
+$numeroFotos = count($listado);
+$numeroFila = $numeroFotos / 3;
+$numeroFila = (int)$numeroFila;
+
+//preparo las fotos en pequeño (coletilla _min.jpg)
+for($fila = 0;$fila <= $numeroFila; $fila++) //recorremos las filas de 3 fotos
+{
     ?>
-        
-        
-      
-      
-      
-      
-
-
-
-
-      
-<!--       Portfolio Item Normal Expander 
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design  isotope-item">
-        <div class="portfolio-image"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
-        <div class="project-overlay">
-          <div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-normal-expander-1.html" title="Open Project"></a> </div>
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">Sony Phone</h4>
-            <p class="project-categories">Design</p>
+    <div class="row">
+    <?php
+    for($pos = 1;$pos <= 3; $pos++) //recorremos las 3 fotos
+    {
+        $posArray = ($fila * 3) + $pos;
+        $fichero = $listado[$posArray];
+        $texto = explode('.',$fichero);
+        $texto = $texto[0];
+        ?>
+        <div class="col-lg-4 col-sm-4">
+          <div class="service_block">
+            <div class="thumbnail">
+            <div class="delay-03s animated wow  zoomIn">
+              <a data-toggle="modal" data-target="#<?php echo 'id'.$posArray; ?>">
+                <img src="images/Frentes/Interiores/<?php echo $fichero; ?>" style="height:50%;width:50%;">
+              </a>
+            </div>
+            <h3 class="animated fadeInUp wow"><?php echo $texto; ?></h3>
+            </div>
           </div>
         </div>
-      </div>
-      /Portfolio Item Normal Expander  
-      
-       Portfolio Item FullScreen Expander 
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  photography  branding web isotope-item">
-        <div class="portfolio-image"> <img src="img/portfolio_pic4.jpg" alt="Portfolio 1"> </div>
-        <div class="project-overlay">
-          <div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-fullscreen-expander-1.html" title="Open Project"></a> </div>
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">Nike Shoes</h4>
-            <p class="project-categories">Photography, Web, Branding</p>
-          </div>
-        </div>
-      </div>
-       Portfolio Item FullScreen Expander  
-      
-       Portfolio Item FullScreen Expander 
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-        <div class="portfolio-image"> <img src="img/portfolio_pic5.jpg" alt="Portfolio 1"> </div>
-        <div class="project-overlay">
-          <div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-fullscreen-expander-2.html" title="Open Project"></a> </div>
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">Vinyl Record</h4>
-            <p class="project-categories">Design</p>
-          </div>
-        </div>
-      </div>
-      /Portfolio Item FullScreen Expander  
-      
-       Portfolio Item Normal Expander 
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
-        <div class="portfolio-image"> <img src="img/portfolio_pic6.jpg" alt="Portfolio 1"> </div>
-        <div class="project-overlay">
-          <div class="open-project-link"> <a class="open-project" href="http://clapat.ro/themes/newave/project-normal-expander-2.html" title="Open Project"></a> </div>
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">iPhone</h4>
-            <p class="project-categories">Web</p>
-          </div>
-        </div>
-      </div>
-      /Portfolio Item Normal Expander  
-      
-       Portfolio Item External Project  
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design web isotope-item">
-        <div class="portfolio-image"> <img src="img/portfolio_pic7.jpg" alt="Portfolio 1"> </div>
-        <a href="http://clapat.ro/themes/newave/project-external-1.html" class="external">
-        <div class="project-overlay">
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">Nexus Phone</h4>
-            <p class="project-categories">Design, Web</p>
-          </div>
-        </div>
-        </a> </div>
-      /Portfolio Item External Project   
-      
-       Portfolio Item With PrettyPhoto  
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   photography isotope-item">
-        <div class="portfolio-image"> <img src="img/portfolio_pic8.jpg" alt="Portfolio 1"> </div>
-        <a title="Stereo Headphones" rel="prettyPhoto[galname]" href="http://clapat.ro/themes/newave/images/portfolio/portfolio8.jpg">
-        <div class="project-overlay">
-          <div class="project-info">
-            <div class="zoom-icon"></div>
-            <h4 class="project-name">Art Frame</h4>
-            <p class="project-categories">Photography</p>
-          </div>
-        </div>
-        </a> </div>
-      /Portfolio Item With PrettyPhoto   -->
-      
+        <?php
+    }
+    ?>
     </div>
-    <!--/Portfolio Wrap --> 
-    
+    <?php
+}
+?>
+          
+          
+<!--        <div class="col-lg-4 col-sm-4">
+          <div class="service_block">
+            <div class="delay-03s animated wow zoomIn">
+              <a data-toggle="modal" data-target="#serieA11">
+                <img src="images/5_G.jpg" style="height:50%;width:50%;">
+              </a>
+            </div>
+            <h3 class="animated fadeInUp wow">SERIE A-11 R</h3>
+            <p class="animated fadeInDown wow">Carpinteria Abisagrada de rotura de puente termico
+Marco de 54.2 mm y hoja de 61.2 mm.
+Espesor medio en marcos y hojas de 1.3 mm.
+Juntas de estanqueidad en EPDM..</p>
+            <br/>
+            <a href="" class="contact_btn">Catálogo</a>
+          </div>
+        </div>
+          
+        <div class="col-lg-4 col-sm-4">
+          <div class="service_block">
+            <div class="delay-03s animated wow zoomIn">
+              <a data-toggle="modal" data-target="#serie1000">
+                <img src="images/4_G.jpg" style="height:50%;width:50%;">
+              </a>
+            </div>
+            <h3 class="animated fadeInUp wow">Serie Euro 1000</h3>
+            <p class="animated fadeInDown wow">La serie Euro 1000 es un modelo de ventana corredera que cuenta con un elevado nivel de calidad.
+
+Esta creada con el fin de ofrecer a los clientes un producto de grandes prestaciones por contar con componentes de altísima calidad.
+
+Esta ventana esta orientada a los profesionales que buscan la calidad sin descuidar el precio.</p>
+            <br/>
+            <a href="" class="contact_btn">Catálogo</a>
+          </div>
+        </div>-->
+          
+      </div>
+        
+    </div>
   </div>
-  <!--/Portfolio Plus Filters -->
-  
-  <div class="portfolio-bottom"></div>
-  
-  <!-- Project Page Holder-->
-  <div id="project-page-holder">
-    <div class="clear"></div>
-    <div id="project-page-data"></div>
-  </div>
-  <!--/Project Page Holder--> 
-  
 </section>
+<!--Service-->
+
+<?php
+//ahora preparo las fotos en en modal (coletilla *_min*.jpg)
+for($i = 0;$i <= $numeroFotos; $i++) //recorremos las filas de 3 fotos
+{
+    $fichero = $listado[$i];
+    $texto = explode('.',$fichero);
+    $texto = $texto[0];
+?>
+    
+<!--formulario de fotos Frente-->
+<div class="modal fade" id="<?php echo 'id'.$i; ?>" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    <?php echo $texto; ?>
+                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/Frentes/Interiores/<?php echo $fichero; ?>" style="height:70%;width:70%;">
+            </div>
+        </div>
+    </div>
+</div>
+    
+<?php
+}
+?>
+
+
+
+
+<!--NO VALE POR AHORA-->
+<!-- Portfolio -->
+<!--<section id="" class="content"> 
+</section>-->
 <!--/Portfolio --> 
 
 <!--new_portfolio--> 
