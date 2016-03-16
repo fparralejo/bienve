@@ -5417,13 +5417,13 @@ function resizeText() {
                 //se guardan los datos en la tabla "mensajes"
                 //y si se a guardado correctamente se devuelve un mensaje de OK
                 //se envia el correo con el mensaje a la direccion "ccristaleria@gmail.com"
-//                $usuario = 'root';
-//                $password = '';
-//                $nombreBD = 'bienve';
+                $usuario = 'root';
+                $password = '';
+                $nombreBD = 'bienve';
                 
-                $usuario = 'u592842228_marqu';//hostinger
-                $password = 'parra1970';
-                $nombreBD = 'u592842228_marqu';
+//                $usuario = 'u592842228_marqu';//hostinger
+//                $password = 'parra1970';
+//                $nombreBD = 'u592842228_marqu';
                 
 
                 $con = mysql_connect('localhost', $usuario, $password);
@@ -5447,18 +5447,19 @@ function resizeText() {
                 $result = mysql_query($sql);
                 mysql_close($con);
 
-                if($result){
-                    echo '<div class="alert alert-success">Enviado su mensaje correctamente.<br/> Le daremos respuesta lo más pronto posible<br/>Muchas gracias</div>';
-                }else{
-                    echo '<div class="alert alert-danger">ERROR</div>';
-                }
+//                if($result){
+//                    echo '<div class="alert alert-danger">OK</div>';
+//                }else{
+//                    echo '<div class="alert alert-danger">ERROR</div>';
+//                }
                         
                   
                 //ahora hago el envio del correo a "ccristaleria@gmail.com"  
                 require_once './phpmailer/PHPMailerAutoload.php';
                 
                 $from = $email;
-                $to = 'ccristaleria@gmail.com';
+//                $to = 'ccristaleria@gmail.com';
+                $to = 'fparralejo1970@gmail.com';//pruebas
 
                 $mail = new PHPMailer();
                 //Correo desde donde se envía (from)
@@ -5490,13 +5491,15 @@ function resizeText() {
                 $mail->msgHTML($html);
                 //Envio del mail
                 if ($mail->send()) {
+                    echo '<div class="alert alert-success">Enviado su mensaje correctamente.<br/> Le daremos respuesta lo más pronto posible<br/>Muchas gracias</div>';
                 } else {
+                    echo '<div class="alert alert-danger">ERROR No se envió el mensaje, pruebe en unos instantes otra vez. Perdone las molestias</div>';
                 }
               }                
               ?>
               <form name="contactar" action="index.php#contact" method="post">
-                <input class="input-text animated wow flipInY delay-02s" type="text" name="nombre" value="Su Nombre *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-                <input class="input-text animated wow flipInY delay-04s" type="text" name="email" value="Su E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
+                <input class="input-text animated wow flipInY delay-02s" type="text" name="nombre" placeholder="Su Nombre *">
+                <input class="input-text animated wow flipInY delay-04s" type="text" name="email" placeholder="Su E-mail *">
                 <textarea class="input-text text-area animated wow flipInY delay-06s" name="mensaje" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Su mensaje *</textarea>
                 <input class="input-btn animated wow flipInY delay-08s" type="button" id="btnContact" value="Enviar" onclick="validar();">
               </form> 
@@ -5507,13 +5510,13 @@ function resizeText() {
 
                     //comprobacion del campo 'nombre'
                     if (document.contactar.nombre.value === ''){ 
-                        textoError = textoError + "Es necesario introducir su nombre.\n";
+                        textoError = textoError + "Es necesario introducir un nombre.\n";
                         esValido = false;
                     }
 
                     //comprobacion del campo 'email'
                     if (document.contactar.email.value === ''){ 
-                        textoError = textoError + "Es necesario introducir su email.\n";
+                        textoError = textoError + "Es necesario introducir un email.\n";
                         esValido = false;
                     }else{
                       //compruebo que el e-mail tenga un formato correcto 'admin@admin.com'  
