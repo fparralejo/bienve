@@ -5417,13 +5417,17 @@ function resizeText() {
                 //se guardan los datos en la tabla "mensajes"
                 //y si se a guardado correctamente se devuelve un mensaje de OK
                 //se envia el correo con el mensaje a la direccion "ccristaleria@gmail.com"
-                $usuario = 'root';
-                $password = '';
-                $nombreBD = 'bienve';
+//                $usuario = 'root';
+//                $password = '';
+//                $nombreBD = 'bienve';
                 
 //                $usuario = 'u592842228_marqu';//hostinger
 //                $password = 'parra1970';
 //                $nombreBD = 'u592842228_marqu';
+                
+                $usuario = 's201859c_parra';//MBI
+                $password = 'parra1970';
+                $nombreBD = 's201859c_bienve';
                 
 
                 $con = mysql_connect('localhost', $usuario, $password);
