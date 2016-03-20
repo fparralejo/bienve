@@ -5,7 +5,7 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 <title>Aluminios Marquez</title>
-<link rel="icon" href="favicon.png" type="image/png">
+<link rel="icon" href="favicon.ico" type="image/ico">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"><link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/linecons.css" rel="stylesheet" type="text/css">
@@ -68,7 +68,7 @@ function resizeText() {
 <header id="header_outer">
   <div class="container">
     <div class="header_section">
-      <div class="logo"><a href="javascript:void(0)"><img src="img/logob.png" alt=""></a></div>
+      <div class="logo"><a href="javascript:void(0)"><img src="images/logo-bienve.jpg" alt=""></a></div>
       <nav class="nav" id="nav">
         <ul class="toggle">
           <li><a href="#top_content">Inicio</a></li>
@@ -79,6 +79,7 @@ function resizeText() {
           <li><a href="#frente_armario">Frente Armario</a></li>
           <li><a href="#cortina_cristal">Cortina Cristal</a></li>
           <li><a href="#persiana">Persiana</a></li>
+          <li><a href="#toldos">Toldos</a></li>
           <li><a href="#contact">Contactar</a></li>
           <li><a href=""></a></li>
         </ul>
@@ -91,6 +92,7 @@ function resizeText() {
           <li><a href="#frente_armario">Frente Armario</a></li>
           <li><a href="#cortina_cristal">Cortina Cristal</a></li>
           <li><a href="#persiana">Persiana</a></li>
+          <li><a href="#toldos">Toldos</a></li>
           <li><a href="#contact">Contactar</a></li>
         </ul>
       </nav>
@@ -5285,6 +5287,214 @@ function resizeText() {
 </div>
 
 
+<!--Persianas-->
+<section class="main-section" id="persiana"><!--main-section client-part-start-->
+  <div class="container">
+    <h2>Persianas</h2>
+    <div class="service_area">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#per01">
+                                <img src="images/persianas/IMG_20150731_105014.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">IMG_20150731_105014</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#per02">
+                                <img src="images/persianas/IMG_20151113_121531.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">IMG_20151113_121531</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>    
+</section>
+
+<!--formulario de fotos Persianas-->
+<div class="modal fade" id="per01" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    IMG_20150731_105014                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/persianas/IMG_20150731_105014.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Persianas-->
+<div class="modal fade" id="per02" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    IMG_20151113_121531                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/persianas/IMG_20151113_121531.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--Toldos-->
+<section class="main-section" id="toldos"><!--main-section client-part-start-->
+  <div class="container">
+    <h2>Toldos</h2>
+    <div class="service_area">
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#tol01">
+                                <img src="images/Catalogo/WP_002261.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">WP_002261</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#tol02">
+                                <img src="images/Catalogo/WP_002266.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">WP_002266</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#tol03">
+                                <img src="images/toldos/IMG_20150527_185218.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">IMG_20150527_185218</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>    
+</section>
+
+<!--formulario de fotos Toldos-->
+<div class="modal fade" id="tol01" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    WP_002261                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/Catalogo/WP_002261.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Toldos-->
+<div class="modal fade" id="tol02" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    WP_002266                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/Catalogo/WP_002266.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Toldos-->
+<div class="modal fade" id="tol03" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    IMG_20150527_185218                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/Catalogo/IMG_20150527_185218.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 
 
@@ -5462,8 +5672,8 @@ function resizeText() {
                 require_once './phpmailer/PHPMailerAutoload.php';
                 
                 $from = $email;
-//                $to = 'ccristaleria@gmail.com';
-                $to = 'fparralejo1970@gmail.com';//pruebas
+                $to = 'ccristaleria@gmail.com';
+//                $to = 'fparralejo1970@gmail.com';//pruebas
 
                 $mail = new PHPMailer();
                 //Correo desde donde se envía (from)
