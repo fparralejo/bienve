@@ -5555,7 +5555,47 @@ cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desap
                     </div>
                 </div>
             </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#per03">
+                                <img src="images/persianas/IMG_20160321_104541.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">IMG_20160321_104541</h3>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#per04">
+                                <img src="images/persianas/IMG_20160321_104544.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">IMG_20160321_104544</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#per05">
+                                <img src="images/persianas/IMG_20160321_104553.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">IMG_20160321_104553</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
   </div>    
 </section>
@@ -5603,6 +5643,78 @@ cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desap
             <!-- Modal Body -->
             <div class="modal-body">
               <img src="images/persianas/IMG_20151113_121531.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Persianas-->
+<div class="modal fade" id="per03" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    IMG_20160321_104541                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/persianas/IMG_20160321_104541.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Persianas-->
+<div class="modal fade" id="per04" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    IMG_20160321_104544                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/persianas/IMG_20160321_104544.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Persianas-->
+<div class="modal fade" id="per05" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    IMG_20160321_104553                </h4>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <img src="images/persianas/IMG_20160321_104553.jpg" style="height:100%;width:100%;">
             </div>
         </div>
     </div>
