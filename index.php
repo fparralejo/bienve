@@ -5985,31 +5985,53 @@ cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desap
 //                $password = 'parra1970';
 //                $nombreBD = 'u592842228_marqu';
                 
+                $server = 'localhost';//MBI
                 $usuario = 's201859c_parra';//MBI
                 $password = 'parra1970';
                 $nombreBD = 's201859c_bienve';
+
+                function logger($texto){
+                    $ddf = fopen('./log/log.txt', 'a');
+                    date_default_timezone_set('Europe/Madrid');
+                    fwrite($ddf, "[" . date("r") . " - IP:".$_SERVER['REMOTE_HOST']."] $texto\n");
+                    fclose($ddf);
+                }
                 
 
-                $con = mysql_connect('localhost', $usuario, $password);
+                try {
+                    $con = mysql_connect($server, $usuario, $password);
 
-                mysql_select_db($nombreBD);
-                mysql_query( "SET NAMES 'utf8'" );
+                    //logger($con);
+                    
+                    mysql_select_db($nombreBD);
+                    mysql_query( "SET NAMES 'utf8'" );
+                    
+                    //extraigo el Id nuevo
+                    $result = mysql_query('SELECT IF(ISNULL(MAX(id)),1,MAX(id)+1) AS id FROM mensajes');
+                    logger('IdNuevoSQL: '.$result);
+                    
+                    $row = mysql_fetch_array($result);
+                    $IdNuevo = $row['id'];
 
-                //extraigo el Id nuevo
-                $result = mysql_query('SELECT IF(ISNULL(MAX(id)),1,MAX(id)+1) AS id FROM mensajes');
+                    logger('IdNuevo: '.$IdNuevo);
+                    //ahora hago la inserción
+
+                    $nombre = mysql_real_escape_string($_POST['nombre']);
+                    $email = mysql_real_escape_string($_POST['email']);
+                    $mensaje = mysql_real_escape_string($_POST['mensaje']);
+                    $sql = "INSERT INTO mensajes (Id, fecha, nombre, email, mensaje) VALUES ($IdNuevo,now(),'$nombre','$email','$mensaje')";
+
+                    logger($sql);
+                    
+                    $result = mysql_query($sql);
+                    mysql_close($con);
+                    
+                } catch ( Exception $e ){
+                    //se escribe en un fichero log
+                    logger($e);
+                }
                 
-                $row = mysql_fetch_array($result);
-                $IdNuevo = $row['id'];
                 
-                //ahora hago la inserción
-                
-                $nombre = mysql_real_escape_string($_POST['nombre']);
-                $email = mysql_real_escape_string($_POST['email']);
-                $mensaje = mysql_real_escape_string($_POST['mensaje']);
-                $sql = "INSERT INTO mensajes (Id, fecha, nombre, email, mensaje) VALUES ($IdNuevo,now(),'$nombre','$email','$mensaje')";
-                
-                $result = mysql_query($sql);
-                mysql_close($con);
 
 //                if($result){
 //                    echo '<div class="alert alert-danger">OK</div>';
