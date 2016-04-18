@@ -306,19 +306,19 @@ cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desap
 <header id="header_outer">
   <div class="container">
     <div class="header_section">
-      <div class="logo"><a href="#top_content"><img src="images/logo-bienve.jpg" alt=""></a></div>
+      <div class="logo"><a class="menuBoton" href="#top_content"><img src="images/logo-bienve.jpg" alt=""></a></div>
       <nav class="nav" id="nav">
         <ul class="toggle">
 <!--          <li><a href="#top_content">Inicio</a></li>-->
-          <li><a href="#service">Aluminio</a></li>
-          <li><a href="#catalogo">Catálogo</a></li>
-          <li><a href="#PVC">PVC</a></li>
-          <li><a href="#mampara_bano">Mampara Baño</a></li>
-          <li><a href="#frente_armario">Frente Armario</a></li>
-          <li><a href="#cortina_cristal">Cortina Cristal</a></li>
-          <li><a href="#persiana">Persiana</a></li>
-          <li><a href="#toldos">Toldos</a></li>
-          <li><a href="#contact">Contactar</a></li>
+          <li><a class="menuBoton" href="#service">Aluminio</a></li>
+          <li><a class="menuBoton" href="#catalogo">Catálogo</a></li>
+          <li><a class="menuBoton" href="#PVC">PVC</a></li>
+          <li><a class="menuBoton" href="#mampara_bano">Mampara Baño</a></li>
+          <li><a class="menuBoton" href="#frente_armario">Frente Armario</a></li>
+          <li><a class="menuBoton" href="#cortina_cristal">Cortina Cristal</a></li>
+          <li><a class="menuBoton" href="#persiana">Persiana</a></li>
+          <li><a class="menuBoton" href="#toldos">Toldos</a></li>
+          <li><a class="menuBoton" href="#contact">Contactar</a></li>
           <li><a href=""></a></li>
         </ul>
         <ul class="">
@@ -6181,6 +6181,11 @@ cookie1.setAttribute("style","animation: desaparecer 5s;-webkit-animation: desap
 			*/
 			event.preventDefault();
 		});
+                
+                $('.menuBoton').click(function(event){
+                    $(".toggle").css("display","none");
+                });
+                
 	})
 </script> 
 
