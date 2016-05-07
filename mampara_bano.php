@@ -61,11 +61,11 @@ include "./header.php";
                 <div class="service_block">
                     <div class="thumbnail">
                         <div class="delay-03s animated wow  zoomIn">
-                            <a data-toggle="modal" data-target="#id60">
-                                <img src="images/Frentes/wenge-con-inox.jpg" style="height:50%;width:50%;">
+                            <a data-toggle="modal" data-target="#id1">
+                                <img src="images/mamparas/mampara.jpg" style="height:50%;width:50%;">
                             </a>
                         </div>
-                        <h3 class="animated fadeInUp wow">wenge-con-inox</h3>
+                        <h3 class="animated fadeInUp wow">mampara</h3>
                     </div>
                 </div>
             </div>
@@ -74,10 +74,10 @@ include "./header.php";
                     <div class="thumbnail">
                         <div class="delay-03s animated wow  zoomIn">
                             <a data-toggle="modal" data-target="#id2">
-                                <img src="images/Frentes/2-Hojas-crema-butilar.jpg" style="height:50%;width:50%;">
+                                <img src="images/mamparas/2 franjas al centro.jpg" style="height:50%;width:50%;">
                             </a>
                         </div>
-                        <h3 class="animated fadeInUp wow">2-Hojas-crema-butilar</h3>
+                        <h3 class="animated fadeInUp wow">2 franjas al centro</h3>
                     </div>
                 </div>
             </div>
@@ -86,15 +86,42 @@ include "./header.php";
                     <div class="thumbnail">
                         <div class="delay-03s animated wow  zoomIn">
                             <a data-toggle="modal" data-target="#id3">
-                                <img src="images/Frentes/3 hojas virdrio.jpg" style="height:50%;width:50%;">
+                                <img src="images/mamparas/ajedrez.jpg" style="height:50%;width:50%;">
                             </a>
                         </div>
-                        <h3 class="animated fadeInUp wow">3 hojas virdrio</h3>
+                        <h3 class="animated fadeInUp wow">ajedrez</h3>
                     </div>
                 </div>
             </div>
         </div>
         
+        <div class="row">
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#id4">
+                                <img src="images/mamparas/marbella.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">marbella</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-4">
+                <div class="service_block">
+                    <div class="thumbnail">
+                        <div class="delay-03s animated wow  zoomIn">
+                            <a data-toggle="modal" data-target="#id5">
+                                <img src="images/mamparas/rayas horizontales.jpg" style="height:50%;width:50%;">
+                            </a>
+                        </div>
+                        <h3 class="animated fadeInUp wow">rayas horizontales</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
         
         
         
@@ -106,11 +133,12 @@ include "./header.php";
 </section>
 
 
- <div class="modal fade" id="acustico" tabindex="-1" role="dialog" 
+<!--formulario de fotos Mamparas Baño-->
+<div class="modal fade" id="id1" tabindex="-1" role="dialog" 
      aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-             Modal Header 
+             <!--Modal Header--> 
             <div class="modal-header">
                 <button type="button" class="close" 
                    data-dismiss="modal">
@@ -118,13 +146,113 @@ include "./header.php";
                        <span class="sr-only">Close</span>
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    Aislamiento Acústico
+                    mampara
                 </h4>
             </div>
             
-             Modal Body 
+             <!--Modal Body--> 
             <div class="modal-body">
-              <img src="images/PVC/aislamiento-acustico.png" style="height:100%;width:100%;">
+              <img src="images/mamparas/mampara.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Mamparas Baño-->
+<div class="modal fade" id="id2" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <!--Modal Header--> 
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    2 franjas al centro
+                </h4>
+            </div>
+            
+             <!--Modal Body--> 
+            <div class="modal-body">
+              <img src="images/mamparas/2 franjas al centro.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Mamparas Baño-->
+<div class="modal fade" id="id3" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <!--Modal Header--> 
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    ajedrez
+                </h4>
+            </div>
+            
+             <!--Modal Body--> 
+            <div class="modal-body">
+              <img src="images/mamparas/ajedrez.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Mamparas Baño-->
+<div class="modal fade" id="id4" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <!--Modal Header--> 
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    marbella
+                </h4>
+            </div>
+            
+             <!--Modal Body--> 
+            <div class="modal-body">
+              <img src="images/mamparas/marbella.jpg" style="height:100%;width:100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--formulario de fotos Mamparas Baño-->
+<div class="modal fade" id="id5" tabindex="-1" role="dialog" 
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <!--Modal Header--> 
+            <div class="modal-header">
+                <button type="button" class="close" 
+                   data-dismiss="modal">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    rayas horizontales
+                </h4>
+            </div>
+            
+             <!--Modal Body--> 
+            <div class="modal-body">
+              <img src="images/mamparas/rayas horizontales.jpg" style="height:100%;width:100%;">
             </div>
         </div>
     </div>

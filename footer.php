@@ -48,6 +48,7 @@
                 //se guardan los datos en la tabla "mensajes"
                 //y si se a guardado correctamente se devuelve un mensaje de OK
                 //se envia el correo con el mensaje a la direccion "ccristaleria@gmail.com"
+//                $server = 'localhost';
 //                $usuario = 'root';
 //                $password = '';
 //                $nombreBD = 'bienve';
@@ -70,53 +71,59 @@
                 
 
                 try {
-                    $con = mysql_connect($server, $usuario, $password);
-
                     //logger($con);
                     
-                    mysql_select_db($nombreBD);
-                    mysql_query( "SET NAMES 'utf8'" );
+                    // Create connection
+                    $conn = new mysqli($server, $usuario, $password, $nombreBD);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Conexion fallida: " . $conn->connect_error);
+                    } 
+                    
+                    $conn->query( "SET NAMES 'utf8'" );
                     
                     //extraigo el Id nuevo
-                    $result = mysql_query('SELECT IF(ISNULL(MAX(id)),1,MAX(id)+1) AS id FROM mensajes');
-                    logger('IdNuevoSQL: '.$result);
+                    $result = $conn->query('SELECT IF(ISNULL(MAX(id)),1,MAX(id)+1) AS id FROM mensajes');
+                    //logger('IdNuevoSQL: '.$result);
                     
-                    $row = mysql_fetch_array($result);
+                    
+                    $row = $result->fetch_assoc();
                     $IdNuevo = $row['id'];
 
-                    logger('IdNuevo: '.$IdNuevo);
+                    //logger('IdNuevo: '.$IdNuevo);
                     //ahora hago la inserción
 
-                    $nombre = mysql_real_escape_string($_POST['nombre']);
-                    $email = mysql_real_escape_string($_POST['email']);
-                    $mensaje = mysql_real_escape_string($_POST['mensaje']);
+                    $nombre = $conn->escape_string($_POST['nombre']);
+                    $email = $conn->escape_string($_POST['email']);
+                    $mensaje = $conn->escape_string($_POST['mensaje']);
                     $sql = "INSERT INTO mensajes (Id, fecha, nombre, email, mensaje) VALUES ($IdNuevo,now(),'$nombre','$email','$mensaje')";
 
-                    logger($sql);
+                    //logger($sql);
                     
-                    $result = mysql_query($sql);
-                    mysql_close($con);
+                    $result = $conn->query($sql);
+                    
+                    $conn->close();
                     
                 } catch ( Exception $e ){
                     //se escribe en un fichero log
-                    logger($e);
+                    //logger($e);
                 }
                 
                 
 
-//                if($result){
-//                    echo '<div class="alert alert-danger">OK</div>';
-//                }else{
-//                    echo '<div class="alert alert-danger">ERROR</div>';
-//                }
+                if($result){
+                    echo '<div class="alert alert-danger">OK</div>';
+                }else{
+                    echo '<div class="alert alert-danger">ERROR</div>';
+                }
                         
                   
                 //ahora hago el envio del correo a "ccristaleria@gmail.com"  
                 require_once './phpmailer/PHPMailerAutoload.php';
                 
                 $from = $email;
-                $to = 'ccristaleria@gmail.com';
-//                $to = 'fparralejo1970@gmail.com';//pruebas
+                //$to = 'ccristaleria@gmail.com';
+                $to = 'fparralejo1970@yahoo.es';//pruebas
 
                 $mail = new PHPMailer();
                 //Correo desde donde se envía (from)
@@ -154,7 +161,7 @@
                 }
               }                
               ?>
-              <form name="contactar" action="index.php#contact" method="post">
+              <form name="contactar" action="index.php" method="post">
                 <input class="input-text animated wow flipInY delay-02s" type="text" name="nombre" placeholder="Su Nombre *">
                 <input class="input-text animated wow flipInY delay-04s" type="text" name="email" placeholder="Su E-mail *">
                 <textarea class="input-text text-area animated wow flipInY delay-06s" name="mensaje" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Su mensaje *</textarea>
