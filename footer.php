@@ -122,8 +122,8 @@
                 require_once './phpmailer/PHPMailerAutoload.php';
                 
                 $from = $email;
-                //$to = 'ccristaleria@gmail.com';
-                $to = 'fparralejo1970@yahoo.es';//pruebas
+                $to = 'ccristaleria@gmail.com';
+                //$to = 'fparralejo1970@yahoo.es';//pruebas
 
                 $mail = new PHPMailer();
                 //Correo desde donde se envía (from)
